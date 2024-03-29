@@ -3,7 +3,7 @@
 # ADD target/devops-spring-boot.jar devops-spring-boot.jar
 # ENTRYPOINT [ "java","-jar","/devops-spring-boot.jar"]
 
-FROM adoptopenjdk/openjdk11:alpine-jre
+FROM adoptopenjdk:11-jre-hotspot
  
 # Set the working directory.
 WORKDIR /usr/src/app
@@ -11,5 +11,6 @@ WORKDIR /usr/src/app
 # Copy the packaged JAR file from the build stage.
 COPY --from=build /usr/src/app/target/*.jar devops-spring-boot.jar
  
+EXPOSE 8080 
 # Specify the command to run on container start.
 ENTRYPOINT ["java","-jar","devops-spring-boot.jar"]
