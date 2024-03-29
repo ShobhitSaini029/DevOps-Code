@@ -3,7 +3,7 @@
 # ADD target/devops-spring-boot.jar devops-spring-boot.jar
 # ENTRYPOINT [ "java","-jar","/devops-spring-boot.jar"]
 
-FROM adoptopenjdk:11-jre-hotspot
+FROM openjdk:11
  
 # Set the working directory.
 WORKDIR /usr/src/app
