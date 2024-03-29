@@ -1,0 +1,4 @@
+FROM openjdk 11.0.22
+EXPOSE 8081
+ADD target/devops-spring-boot.jar devops-spring-boot.jar
+ENTRYPOINT [ "java","-jar","/devops-spring-boot.jar"]
