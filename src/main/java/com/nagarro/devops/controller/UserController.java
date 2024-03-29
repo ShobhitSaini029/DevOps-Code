@@ -10,6 +10,7 @@ public class UserController {
 	
 	@GetMapping
 	public String userData() {
+		System.out.println("Controller is working fine");
 		return "Devops application is connnected.";
 	}
 

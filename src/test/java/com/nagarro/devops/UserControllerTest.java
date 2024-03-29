@@ -17,6 +17,7 @@ public class UserControllerTest {
 
     @Test
     public void testUserData() throws Exception {
+    	System.out.println("Test Cases are working fine");
         mockMvc.perform(MockMvcRequestBuilders.get("/user"))
                .andExpect(MockMvcResultMatchers.status().isOk())
                .andExpect(MockMvcResultMatchers.content().string("Devops application is connnected."));
